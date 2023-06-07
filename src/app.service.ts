@@ -8,12 +8,12 @@ export class AppService {
   constructor(@Inject('JourneyService') private readonly journeyServices: JourneyInterface<any, any>[]) {}
   
   getJourney(city: string, state: string): string {
-    return this.findDecoratorJourneyClass(city.toLocaleUpperCase(), state.toLocaleUpperCase(), {});
+    return this.findDecoratorJourneyClass(city, state, {});
   }
 
   private findDecoratorJourneyClass(city: string, state: string, parameters: any): any {
     const journeyService = this.journeyServices.find(service =>
-      service.city === city && service.state === state
+      service.city.toLocaleUpperCase() === city.toLocaleUpperCase() && service.state.toLocaleUpperCase() === state.toLocaleUpperCase()
     );
     if (journeyService) {
       return journeyService.run(parameters);

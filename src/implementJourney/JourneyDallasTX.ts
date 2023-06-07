@@ -6,10 +6,10 @@ import { Results } from 'src/interface/results.interface';
 interface dallasTexasParams {
 }
 
-@JourneyDecorator()
+@JourneyDecorator('Dallas','Texas')
 class JourneyDallas implements JourneyInterface<dallasTexasParams, Results> {
-  city = 'DALLAS';
-  state = 'TX';
+  city: string;
+  state: string;
   run(parameters: dallasTexasParams) {
     return {
       text: `City: ${this.city} State ${this.state}`,
