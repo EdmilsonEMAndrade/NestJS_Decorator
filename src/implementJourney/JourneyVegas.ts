@@ -4,10 +4,10 @@ import { Results } from "src/interface/results.interface";
 
 interface vegasParams {
 }
-@JourneyDecorator("Las Vegas", "Nevada")
+@JourneyDecorator(City.LAS_VEGAS, State.NV)
 export class JourneyVegas implements JourneyInterface<vegasParams, Results>{
-    city: string;
-    state: string;
+    city: City;
+    state: State;
     run(parameters: vegasParams) {
         return {
             text: `City: ${this.city} State ${this.state}`,

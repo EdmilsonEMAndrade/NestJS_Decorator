@@ -6,10 +6,10 @@ interface newYorkParams {
   population: number;
 }
 
-@JourneyDecorator("New York", "New York")
+@JourneyDecorator(City.NEW_YORK, State.NY)
 class JourneyNewYork implements JourneyInterface<newYorkParams, Results> {
-  city: string;
-  state: string;
+  city: City;
+  state: State;
   run(parameters: newYorkParams) {
     return {
       text: `City: ${this.city} State ${this.state}`,

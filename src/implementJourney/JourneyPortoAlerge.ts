@@ -3,10 +3,10 @@ import { JourneyInterface } from "src/interface/journey.interface";
 import { Parameters } from "src/interface/parameters.interface";
 import { Results } from "src/interface/results.interface";
 
-@JourneyDecorator("Porto Alegre", "Rio Grande do Sul")
+@JourneyDecorator(City.PORTO_ALEGRE, State.RS)
 class JourneyPortoAlegre implements JourneyInterface<Parameters, Results>{
-    city: string;
-    state: string;
+    city: City;
+    state: State;
     run(parameters: Parameters): Results {
         throw new Error("Method not implemented.");
     }
