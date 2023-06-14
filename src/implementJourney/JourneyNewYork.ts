@@ -1,8 +1,9 @@
 import { JourneyDecorator } from 'src/decorator/journey.decorator';
 import { JourneyInterface } from 'src/interface/journey.interface';
 import { Results } from 'src/interface/results.interface';
+import { Parameters } from 'src/interface/parameters.interface';
 
-interface newYorkParams {
+class newYorkParams implements Parameters {
   population: number;
 }
 

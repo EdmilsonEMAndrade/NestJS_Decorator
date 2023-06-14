@@ -3,7 +3,7 @@ import { JourneyInterface } from 'src/interface/journey.interface';
 import { Parameters } from 'src/interface/parameters.interface';
 import { Results } from 'src/interface/results.interface';
 
-interface dallasTexasParams {
+class dallasTexasParams implements Parameters {
 }
 
 @JourneyDecorator(City.DALLAS, State.TX)
